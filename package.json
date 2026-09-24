@@ -1,0 +1,41 @@
+{
+  "name": "interface-ai-computer-use",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Discover once, replay deterministically: a safe computer-use capability system for legacy financial UIs.",
+  "type": "module",
+  "scripts": {
+    "dev": "node --import tsx src/cli/dev.ts",
+    "demo": "node --import tsx src/cli/demo.ts",
+    "discover": "node --import tsx src/cli/discover.ts",
+    "replay": "node --import tsx src/cli/replay.ts",
+    "operator": "node --import tsx src/cli/operator.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "check": "npm run typecheck && npm test",
+    "evidence": "node --import tsx src/cli/demo.ts"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.65.0",
+    "commander": "^14.0.1",
+    "express": "^5.1.0",
+    "openai": "^5.23.2",
+    "playwright": "^1.56.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.38.0",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.10.0",
+    "eslint": "^9.38.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.2",
+    "vitest": "^4.0.3"
+  }
+}
