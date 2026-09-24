@@ -1,0 +1,9 @@
+{
+  "status": "success",
+  "runId": "replay_a230f372",
+  "capabilityId": "member-savings-balance",
+  "outputs": {
+    "savingsBalance": "[REDACTED_SENSITIVE]"
+  },
+  "durationMs": 260
+}
