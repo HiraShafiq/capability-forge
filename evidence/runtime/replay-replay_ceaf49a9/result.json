@@ -1,8 +1,0 @@
-{
-  "status": "business_outcome",
-  "runId": "replay_ceaf49a9",
-  "capabilityId": "member-savings-balance",
-  "code": "MEMBER_NOT_FOUND",
-  "message": "The supplied member identifier does not exist.",
-  "durationMs": 247
-}
