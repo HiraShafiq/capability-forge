@@ -75,7 +75,7 @@ npm run discover -- \
 This writes:
 
 - `evidence/artifacts/member-savings-balance.v1.json`
-- A structured discovery log and screenshots under `evidence/discovery/`
+- A structured discovery log and compiled capability under `evidence/discovery/`
 
 The model is in the loop only during this step.
 
