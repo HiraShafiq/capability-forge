@@ -1,163 +1,3 @@
-{
-  "schemaVersion": "1.0",
-  "capability": {
-    "id": "member-savings-balance",
-    "name": "Read member savings balance",
-    "description": "Looks up a member in a legacy core-servicing UI and returns the available savings balance.",
-    "version": "1.0.0",
-    "status": "draft",
-    "createdAt": "2026-09-21T21:22:56.015Z",
-    "sourceRunId": "discovery_e07b12db",
-    "appFamily": "legacy-core-demo",
-    "testedVariants": [
-      "harbor"
-    ]
-  },
-  "contract": {
-    "inputs": {
-      "memberId": {
-        "type": "string",
-        "description": "Training member identifier",
-        "required": true,
-        "sensitive": true,
-        "pattern": "^M-\\d{4}$"
-      }
-    },
-    "outputs": {
-      "savingsBalance": {
-        "type": "number",
-        "description": "Available savings balance in USD",
-        "required": true,
-        "sensitive": true
-      }
-    },
-    "possibleOutcomes": [
-      "success",
-      "MEMBER_NOT_FOUND",
-      "failure"
-    ]
-  },
-  "policy": {
-    "allowedOrigins": [
-      "http://127.0.0.1:4310"
-    ],
-    "allowedPathPatterns": [
-      "^/tenant/(harbor|summit)(/workspace)?$"
-    ],
-    "allowedActions": [
-      "navigate",
-      "click",
-      "type",
-      "extract",
-      "wait"
-    ],
-    "riskyActionHandling": "escalate",
-    "persistSensitiveValues": false
-  },
-  "steps": [
-    {
-      "id": "step-01",
-      "kind": "navigate",
-      "url": "http://127.0.0.1:4310/tenant/harbor",
-      "risk": "safe"
-    },
-    {
-      "id": "step-02",
-      "kind": "type",
-      "target": {
-        "description": "textbox Member Number",
-        "locators": [
-          {
-            "strategy": "role",
-            "role": "textbox",
-            "name": "Member Number",
-            "exact": true
-          },
-          {
-            "strategy": "text",
-            "text": "Member Number",
-            "exact": true
-          },
-          {
-            "strategy": "coordinate",
-            "x": 308.203125,
-            "y": 157.5,
-            "viewport": {
-              "width": 1280,
-              "height": 800
-            }
-          }
-        ],
-        "minimumMatches": 1,
-        "maximumMatches": 1
-      },
-      "value": "{{memberId}}",
-      "clear": true,
-      "risk": "safe"
-    },
-    {
-      "id": "step-03",
-      "kind": "click",
-      "target": {
-        "description": "button Search",
-        "locators": [
-          {
-            "strategy": "role",
-            "role": "button",
-            "name": "Search",
-            "exact": true
-          },
-          {
-            "strategy": "text",
-            "text": "Search",
-            "exact": true
-          },
-          {
-            "strategy": "coordinate",
-            "x": 497.203125,
-            "y": 157.5,
-            "viewport": {
-              "width": 1280,
-              "height": 800
-            }
-          }
-        ],
-        "minimumMatches": 1,
-        "maximumMatches": 1
-      },
-      "risk": "safe"
-    },
-    {
-      "id": "step-04",
-      "kind": "extract",
-      "target": {
-        "description": "cell Savings available balance",
-        "locators": [
-          {
-            "strategy": "role",
-            "role": "cell",
-            "name": "Savings available balance",
-            "exact": true
-          },
-          {
-            "strategy": "text",
-            "text": "Savings available balance",
-            "exact": true
-          },
-          {
-            "strategy": "coordinate",
-            "x": 633.8359375,
-            "y": 379,
-            "viewport": {
-              "width": 1280,
-              "height": 800
-            }
-          }
-        ],
-        "minimumMatches": 1,
-        "maximumMatches": 1
-      },
-      "output": "savingsBalance",
       "parseAs": "number",
       "risk": "safe"
     }
@@ -165,12 +5,16 @@
   "success": {
     "description": "Deposit accounts table is visible after the requested balance was extracted.",
     "checkpoint": {
-      "description": "Deposit accounts heading",
+      "description": "Deposit accounts table",
       "locators": [
         {
           "strategy": "text",
           "text": "DEPOSIT ACCOUNTS",
           "exact": true
+        },
+        {
+          "strategy": "css",
+          "selector": "table[summary=\"Deposit accounts\"]"
         }
       ],
       "minimumMatches": 1,
