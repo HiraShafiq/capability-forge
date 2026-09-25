@@ -1,0 +1,11 @@
+{
+  "status": "failure",
+  "runId": "replay_57b5c010",
+  "capabilityId": "member-savings-balance",
+  "error": {
+    "code": "REPLAY_ERROR",
+    "message": "Human intervention timed out after 120000ms",
+    "evidencePath": "evidence\\replay\\replay-replay_57b5c010\\failure.png"
+  },
+  "durationMs": 120857
+}

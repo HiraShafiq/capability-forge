@@ -1,0 +1,6 @@
+{"at":"2026-09-25T18:38:38.667Z","runId":"replay_57b5c010","phase":"replay","type":"run_started","data":{"capabilityId":"member-savings-balance","version":"1.0.0","variant":"harbor"}}
+{"at":"2026-09-25T18:38:38.761Z","runId":"replay_57b5c010","phase":"replay","type":"step_started","stepId":"step-01","data":{"kind":"navigate"}}
+{"at":"2026-09-25T18:38:38.928Z","runId":"replay_57b5c010","phase":"replay","type":"step_completed","stepId":"step-01","data":{"kind":"navigate"}}
+{"at":"2026-09-25T18:38:39.009Z","runId":"replay_57b5c010","phase":"replay","type":"recoverable_condition","stepId":"step-02","data":{"code":"SUPERVISOR_REVIEW","action":"escalate"}}
+{"at":"2026-09-25T18:38:39.375Z","runId":"replay_57b5c010","phase":"handoff","type":"intervention_requested","stepId":"step-02","data":{"interventionId":"intervention_26839dac","reason":"SUPERVISOR_REVIEW: A supervisor gate blocks automation."}}
+{"at":"2026-09-25T18:40:39.523Z","runId":"replay_57b5c010","phase":"replay","type":"run_failed","data":{"error":{"code":"REPLAY_ERROR","message":"Human intervention timed out after 120000ms","evidencePath":"evidence\\replay\\replay-replay_57b5c010\\failure.png"}}}

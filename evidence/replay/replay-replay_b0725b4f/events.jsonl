@@ -1,0 +1,12 @@
+{"at":"2026-09-25T18:45:19.915Z","runId":"replay_b0725b4f","phase":"replay","type":"run_started","data":{"capabilityId":"member-savings-balance","version":"1.0.0","variant":"harbor"}}
+{"at":"2026-09-25T18:45:20.009Z","runId":"replay_b0725b4f","phase":"replay","type":"step_started","stepId":"step-01","data":{"kind":"navigate"}}
+{"at":"2026-09-25T18:45:20.143Z","runId":"replay_b0725b4f","phase":"replay","type":"step_completed","stepId":"step-01","data":{"kind":"navigate"}}
+{"at":"2026-09-25T18:45:20.200Z","runId":"replay_b0725b4f","phase":"replay","type":"recoverable_condition","stepId":"step-02","data":{"code":"SUPERVISOR_REVIEW","action":"escalate"}}
+{"at":"2026-09-25T18:45:20.505Z","runId":"replay_b0725b4f","phase":"handoff","type":"intervention_requested","stepId":"step-02","data":{"interventionId":"intervention_54df716a","reason":"SUPERVISOR_REVIEW: A supervisor gate blocks automation."}}
+{"at":"2026-09-25T18:45:44.727Z","runId":"replay_b0725b4f","phase":"replay","type":"step_started","stepId":"step-02","data":{"kind":"type","target":"textbox Member Number"}}
+{"at":"2026-09-25T18:45:44.796Z","runId":"replay_b0725b4f","phase":"replay","type":"step_completed","stepId":"step-02","data":{"kind":"type"}}
+{"at":"2026-09-25T18:45:44.843Z","runId":"replay_b0725b4f","phase":"replay","type":"step_started","stepId":"step-03","data":{"kind":"click","target":"button Search"}}
+{"at":"2026-09-25T18:45:45.286Z","runId":"replay_b0725b4f","phase":"replay","type":"step_completed","stepId":"step-03","data":{"kind":"click"}}
+{"at":"2026-09-25T18:45:45.359Z","runId":"replay_b0725b4f","phase":"replay","type":"step_started","stepId":"step-04","data":{"kind":"extract","target":"cell Savings available balance"}}
+{"at":"2026-09-25T18:45:45.387Z","runId":"replay_b0725b4f","phase":"replay","type":"step_completed","stepId":"step-04","data":{"kind":"extract"}}
+{"at":"2026-09-25T18:45:45.417Z","runId":"replay_b0725b4f","phase":"replay","type":"run_completed","data":{"status":"success","outputNames":["savingsBalance"]}}

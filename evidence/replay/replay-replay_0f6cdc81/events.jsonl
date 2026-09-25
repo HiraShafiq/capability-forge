@@ -1,0 +1,8 @@
+{"at":"2026-09-25T18:47:37.438Z","runId":"replay_0f6cdc81","phase":"replay","type":"run_started","data":{"capabilityId":"member-savings-balance","version":"1.0.0","variant":"harbor"}}
+{"at":"2026-09-25T18:47:37.491Z","runId":"replay_0f6cdc81","phase":"replay","type":"step_started","stepId":"step-01","data":{"kind":"navigate"}}
+{"at":"2026-09-25T18:47:37.568Z","runId":"replay_0f6cdc81","phase":"replay","type":"step_completed","stepId":"step-01","data":{"kind":"navigate"}}
+{"at":"2026-09-25T18:47:37.619Z","runId":"replay_0f6cdc81","phase":"replay","type":"step_started","stepId":"step-02","data":{"kind":"type","target":"textbox Member Number"}}
+{"at":"2026-09-25T18:47:37.661Z","runId":"replay_0f6cdc81","phase":"replay","type":"step_completed","stepId":"step-02","data":{"kind":"type"}}
+{"at":"2026-09-25T18:47:37.679Z","runId":"replay_0f6cdc81","phase":"replay","type":"step_started","stepId":"step-03","data":{"kind":"click","target":"button Search"}}
+{"at":"2026-09-25T18:47:37.865Z","runId":"replay_0f6cdc81","phase":"replay","type":"step_completed","stepId":"step-03","data":{"kind":"click"}}
+{"at":"2026-09-25T18:47:37.911Z","runId":"replay_0f6cdc81","phase":"replay","type":"business_outcome","stepId":"step-04","data":{"status":"business_outcome","runId":"replay_0f6cdc81","capabilityId":"member-savings-balance","code":"MEMBER_NOT_FOUND","message":"The supplied member identifier does not exist.","durationMs":473}}
